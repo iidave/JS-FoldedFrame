@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css">
+    <title>Folded Frame Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <H1>Enter size of the folded box in inches</H1>
+        <div class="inputDims">
+          <div class="faceInput">
+            <p>Face Width(inches)<input type="text" name="width" id="faceWidth" value=24></p>
+            <p>Face Height<input type="text" name="height" id="faceHeight"value=36></p>
+
+            <p>Board Thickness<input type="text" name="thickness" id="thickness" value=.25></p>
+            <p>Frame Depth<input type="text" name="depth" id="depth" value=6></p>
+            <p>Frame Base<input type="text" name="base" id="base" value=4></p>
+
+            <div class="slidecontainer">
+              <p>View scale = <span class="viewScale"></span></p>
+              <input type="range" min="5" max="15" value="10" class="slider" id="scale">
+              <button id="Enter" class="button1" style="background-color:var(--tertiary-color)">Calculate</button>
+              <p class="dims"></p>
+            </div>
+          </div>
+        
+            <div class="foldAttrib">
+              <div class="top">
+                <div id="frameTapeHoriz"></div>
+                <div id="frameReturnHoriz"></div>
+                <div id="frameBaseHoriz"><div id="text" class="toptxt"></div></div>
+                <div id="frameDepthHoriz"></div>
+              </div>
+              <div class="middle">
+                <div id="frameTape" class="left"></div>
+                <div id="frameReturn"></div>
+                <div id="frameBase"><div id="text" class="left"></div></div>
+                <div id="frameDepth"></div>
+                <div id="face"></div>
+                <div id="frameDepth"></div>
+                <div id="frameBase"><div id="text" class="right"></div></div>
+                <div id="frameReturn"></div>
+                <div id="frameTape"class="right"></div>
+              </div>
+              <div class="bottom">
+                <div id="frameDepthHorizBtm"></div>
+                <div id="frameBaseHorizBtm"><div id="text" class="btmtxt"></div></div>
+                <div id="frameReturnHorizBtm"></div>
+                <div id="frameTapeHorizBtm"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+      <script src="frame-calc.js"></script>
+  </body>
+</html>
