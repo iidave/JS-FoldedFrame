@@ -1,5 +1,5 @@
 //input section
-const button = document.querySelector("#Enter")
+const $button = document.querySelector("#Enter")
 const fWidth = document.querySelector("#faceWidth");
 const fHeight = document.querySelector("#faceHeight");
 const brdThick = document.querySelector("#thickness");
@@ -126,7 +126,7 @@ function boardSize() {
 }
 
 //EventListeners
-button.addEventListener('click', calculate);
+$button.addEventListener('click', calculate);
 scale.addEventListener('input', calculate);
 
 calculate();
