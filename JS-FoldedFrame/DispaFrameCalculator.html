@@ -44,17 +44,21 @@
               class="slider"
               id="scale"
             />
-            <button
+            <!-- <button
               id="Enter"
-              class="button1"
-              style="background-color: var(--tertiary-color)"
-            >
+              class="button1">
               Calculate
-            </button>
-            <p class="dims"></p>
+            </button> -->
           </div>
         </div>
-
+        
+      </div>
+    </div>
+    <div x-data="{ open: false }" class="center">
+      <button id="Enter"
+      class="button1" @click="open = true">Calculate</button>
+      <span x-show="open"> 
+        <p class="dims"></p>
         <div class="foldAttrib">
           <div class="top">
             <div id="frameTapeHoriz"></div>
@@ -84,12 +88,7 @@
             <div id="frameTapeHorizBtm"></div>
           </div>
         </div>
-      </div>
-    </div>
-    <div x-data="{ open: false }">
-      <button @click="open = true">Expand</button>
-
-      <span x-show="open"> Content... </span>
+      </span>
     </div>
     <script src="frame-calc.js"></script>
   </body>
